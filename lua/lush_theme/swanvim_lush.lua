@@ -61,28 +61,29 @@ local theme = lush(function(injected_functions)
     --
     -- See :h highlight-groups
     --
-    -- ColorColumn    { }, -- Columns set with 'colorcolumn'
-    -- Conceal        { }, -- Placeholder characters substituted for concealed text (see 'conceallevel')
-    -- Cursor         { }, -- Character under the cursor
-    -- CurSearch      { }, -- Highlighting a search pattern under the cursor (see 'hlsearch')
-    -- lCursor        { }, -- Character under the cursor when |language-mapping| is used (see 'guicursor')
-    -- CursorIM       { }, -- Like Cursor, but used when in IME mode |CursorIM|
-    -- CursorColumn   { }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    -- CursorLine     { }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
-    -- Directory      { }, -- Directory names (and other special names in listings)
-    -- DiffAdd        { }, -- Diff mode: Added line |diff.txt|
-    -- DiffChange     { }, -- Diff mode: Changed line |diff.txt|
-    -- DiffDelete     { }, -- Diff mode: Deleted line |diff.txt|
-    -- DiffText       { }, -- Diff mode: Changed text within a changed line |diff.txt|
-    -- EndOfBuffer    { }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
-    -- TermCursor     { }, -- Cursor in a focused terminal
-    -- TermCursorNC   { }, -- Cursor in an unfocused terminal
-    -- ErrorMsg       { }, -- Error messages on the command line
-    -- VertSplit      { }, -- Column separating vertically split windows
-    -- Folded         { }, -- Line used for closed folds
-    -- FoldColumn     { }, -- 'foldcolumn'
-    -- SignColumn     { }, -- Column where |signs| are displayed
-    -- IncSearch      { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    ColorColumn    { bg = hsl("#2a2e36") }, -- Columns set with 'colorcolumn'
+    Conceal        { fg = hsl("#5c6370"), bg = hsl("#1e222a") }, -- Placeholder characters substituted for concealed text (see 'conceallevel')
+    Cursor         { fg = hsl("#1e222a"), bg = hsl("#61afef") }, -- Character under the cursor
+    CurSearch      { fg = hsl("#1e222a"), bg = hsl("#98c379") }, -- Highlighting a search pattern under the cursor (see 'hlsearch')
+    lCursor        { fg = hsl("#1e222a"), bg = hsl("#e06c75") }, -- Character under the cursor when |language-mapping| is used (see 'guicursor')
+    CursorIM       { fg = hsl("#1e222a"), bg = hsl("#61afef") }, -- Like Cursor, but used when in IME mode |CursorIM|
+    CursorColumn   { bg = hsl("#2a2e36") }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
+    CursorLine     { bg = hsl("#2a2e36") }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
+    Directory      { fg = hsl("#61afef") }, -- Directory names (and other special names in listings)
+    DiffAdd        { fg = hsl("#98c379"), bg = hsl("#1e222a") }, -- Diff mode: Added line |diff.txt|
+    DiffChange     { fg = hsl("#d19a66"), bg = hsl("#1e222a") }, -- Diff mode: Changed line |diff.txt|
+    DiffDelete     { fg = hsl("#e06c75"), bg = hsl("#1e222a") }, -- Diff mode: Deleted line |diff.txt|
+    DiffText       { fg = hsl("#61afef"), bg = hsl("#1e222a") }, -- Diff mode: Changed text within a changed line |diff.txt|
+    EndOfBuffer    { fg = hsl("#1e222a") }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
+    TermCursor     { fg = hsl("#1e222a"), bg = hsl("#e5c07b") }, -- Cursor in a focused terminal
+    TermCursorNC   { fg = hsl("#1e222a"), bg = hsl("#5c6370") }, -- Cursor in an unfocused terminal
+    ErrorMsg       { fg = hsl("#e06c75"), bg = hsl("#1e222a") }, -- Error messages on the command line
+    VertSplit      { fg = hsl("#4b5263") }, -- Column separating vertically split windows
+    Folded         { fg = hsl("#abb2bf"), bg = hsl("#2a2e36") }, -- Line used for closed folds
+    FoldColumn     { fg = hsl("#4b5263"), bg = hsl("#1e222a") }, -- 'foldcolumn'
+    SignColumn     { bg = hsl("#1e222a") }, -- Column where |signs| are displayed
+    IncSearch      { fg = hsl("#1e222a"), bg = hsl("#98c379") }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+
     -- Substitute     { }, -- |:substitute| replacement text highlighting
     -- LineNr         { }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     -- LineNrAbove    { }, -- Line number for when the 'relativenumber' option is set, above the cursor line
